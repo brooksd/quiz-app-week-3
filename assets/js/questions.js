@@ -40,6 +40,8 @@ const quizData = [
         correct: 'c'
     }
 ];
+
+const answersElement = document.querySelectorAll('.answer');
 const questionElement = document.getElementById("questions");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
@@ -53,27 +55,34 @@ let score = 0;
 loadQuizApp();
 
 function loadQuizApp() {
-  const currentQuestionData = quizData[currentQuiz];
-  questionElement.innerText = currentQuestionData.question;
+    deselctAnswers();
 
-  a_text.innerText = currentQuestionData.a;
-  b_text.innerText = currentQuestionData.b;
-  c_text.innerText = currentQuestionData.c;
-  d_text.innerText = currentQuestionData.d;
+    const currentQuestionData = quizData[currentQuiz];
+    questionElement.innerText = currentQuestionData.question;
+
+    a_text.innerText = currentQuestionData.a;
+    b_text.innerText = currentQuestionData.b;
+    c_text.innerText = currentQuestionData.c;
+    d_text.innerText = currentQuestionData.d;
 }
 
 function getSelected() {
-    const answersElement = document.querySelectorAll('.answer');
 
     let answer = undefined;
 
-    answersElement.forEach(answersElement => {
+    answersElement.forEach((answersElement) => {
         if(answersElement.checked) {
             answer = answersElement.id;
         }
     });
 
     return answer;
+}
+
+function deselctAnswers() {
+    answersElement.forEach((answersElement) => {
+        answersElement.checked = false;
+    });
 }
 
 submitButton.addEventListener('click', () => {
