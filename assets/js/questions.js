@@ -1,4 +1,4 @@
-const TestQuestions = [
+const testQuestions = [
     {
         question: 'Which type of JavaScript language is ___',
         a: 'Object-Oriented',
