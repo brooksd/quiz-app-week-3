@@ -40,12 +40,12 @@ const quizData = [
         correct: 'c'
     }
 ];
-
 const questionElement = document.getElementById("questions");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
+const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
 
@@ -59,6 +59,16 @@ function loadQuizApp() {
   b_text.innerText = currentQuestionData.b;
   c_text.innerText = currentQuestionData.c;
   d_text.innerText = currentQuestionData.d;
-
-  currentQuestionData++;
 }
+
+submitButton.addEventListener('click', () => {
+    currentQuiz++;
+
+    if(currentQuiz < quizData.length) {
+        loadQuizApp();
+    } else {
+        //show Results
+        alert("Done")
+    }
+});
+
