@@ -1,11 +1,11 @@
 const quizData = [
     {
-        question: 'Which type of JavaScript language is ___',
+        question: 'JavaScript is an ____ language',
         a: 'Object-Oriented',
         b:'Object-based',
         c:'Assembly-language',
         d:'High-level',
-        correct: 'b'
+        correct: 'a'
     }, 
     {
         question: 'Which one of the following also known as Conditional Expression:',
@@ -38,11 +38,20 @@ const quizData = [
         c:'Declaration statements',
         d:'Prototypes',
         correct: 'c'
+    },
+    {
+        question: '  Which of the following keywords is used to define a variable in Javascript?',
+        a: 'var',
+        b:'let',
+        c:' Both A & B',
+        d:'None of the above',
+        correct: 'c'
     }
 ];
 
 const answersElement = document.querySelectorAll('.answer');
 const questionElement = document.getElementById("questions");
+const quiz = document.getElementById("quiz");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -103,7 +112,7 @@ submitButton.addEventListener('click', () => {
 
         } else {
         //show Results when done
-        alert("Done")
+            quiz.innerHTML = `<h2>You answered correctly ${score}/${quizData.length} Questions</h2>`
         };   
     };
     
