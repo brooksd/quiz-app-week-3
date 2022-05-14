@@ -9,49 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!---- Quiz Start Button ---->
-    <div class="startButton">
-        <button>Start Test</button>
-    </div>
-    <!--- Rules of the Test --->
-    <div class="rules">
-        <div class="title">Rules of the Quiz Board</div>
-        <div class="rulesList">
-            <ol>
-                <li>You have <strong>15 Seconds</strong> to answer each Question.</li>
-                <li>Once your answer is locked in it can't be changed.</li>
-                <li>Once the timer runs out all answers will be deactivated.</li>
-                <li>You cant <strong>exit the Test once it has begun.</strong></li>
-                <li>You'll get ponts based on the correct Answers you give</li>
-            </ol>
-        </div>
-
-        <div class="exitRetryButtons">
-            <button class="exit"> Exit Test</button>
-            <button class="retry"> Retry Test</button>
-        </div>
-    </div>
 
     <!--- Questions Section --->
 
-    <div class="questionsui">
-        <header>
-            <div class="title">JavaScript Quiz Board</div>
-            <div class="timer">
-                <div class="timeLeftText">Time Left</div>
-                <div class="timerSec"> 15 </div>
+    <div class="questions-container">
+        <div class="questions-box">
+            <header>
+                <!---add timer later-->
+                <div class="title">JavaScript Quiz Board</div>
+            </header>
+            <div class="questions">
+                <h2>Questions Text</h2>
+                <ul>
+                    <li><input type="radio" id="a" name="answer">
+                        <label for="a">Answer</label>
+                    </li>
+                    <li><input type="radio" id="b" name="answer">
+                        <label for="b">Answer</label>
+                    </li>
+                    <li><input type="radio" id="c" name="answer">
+                        <label for="c">Answer</label>
+                    </li>
+                    <li><input type="radio" id="d" name="answer">
+                        <label for="d">Answer</label>
+                    </li>
+                </ul>
             </div>
-            <div class="time"></div>
+        </div>
 
-            <section>
-                <div class="questions">
-
-                </div>
-                <div class="multipleCoices">
-                    
-                </div>
-            </section>
-        </header>
     </div>
 
 </body>
