@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz App</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!---- Quiz Start Button ---->
+    <div class="startButton">
+        <button>Start Test</button>
+    </div>
+    <!--- Rules of the Test --->
+    <div class="rules">
+        <div class="title">Rules of the Quiz Board</div>
+        <div class="rulesList">
+            <ol>
+                <li>You have <strong>15 Seconds</strong> to answer each Question.</li>
+                <li>Once your answer is locked in it can't be changed.</li>
+                <li>Once the timer runs out all answers will be deactivated.</li>
+                <li>You cant <strong>exit the Test once it has begun.</strong></li>
+                <li>You'll get ponts based on the correct Answers you give</li>
+            </ol>
+        </div>
+
+        <div class="exitRetryButtons">
+            <button class="exit"> Exit Test</button>
+            <button class="retry"> Retry Test</button>
+        </div>
+    </div>
+
+    <!--- Questions Section --->
+
+    <div class="questionsui">
+        <header>
+            <div class="title">JavaScript Quiz Board</div>
+            <div class="timer">
+                <div class="timeLeftText">Time Left</div>
+                <div class="timerSec"> 15 </div>
+            </div>
+            <div class="time"></div>
+
+            <section>
+                <div class="questions">
+
+                </div>
+                <div class="multipleCoices">
+                    
+                </div>
+            </section>
+        </header>
+    </div>
+
+</body>
+</html>
