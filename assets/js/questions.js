@@ -48,6 +48,7 @@ const d_text = document.getElementById("d_text");
 const submitButton = document.getElementById('submit');
 
 let currentQuiz = 0;
+let score = 0;
 
 loadQuizApp();
 
@@ -64,23 +65,41 @@ function loadQuizApp() {
 function getSelected() {
     const answersElement = document.querySelectorAll('.answer');
 
-    answers.forEach(answersElements => {
+    let answer = undefined;
+
+    answersElement.forEach(answersElement => {
         if(answersElement.checked) {
-            return answersElement.id;
+            answer = answersElement.id;
         }
     });
 
-    return undefined;
+    return answer;
 }
 
 submitButton.addEventListener('click', () => {
-    currentQuiz++;
+    //checks to see the answer
+    const answer = getSelected();   
+    
 
-    if(currentQuiz < quizData.length) {
-        loadQuizApp();
-    } else {
-        //show Results
+    if (answer) {
+        if(answer === quizData[currentQuiz].correct) {
+            score++;
+        }
+
+        currentQuiz++;
+
+        if(currentQuiz < quizData.length) {
+
+            loadQuizApp();
+
+        } else {
+        //show Results when done
         alert("Done")
-    }
+        };   
+    };
+    
+    
+   
+
 });
 
