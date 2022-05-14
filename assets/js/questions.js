@@ -61,6 +61,18 @@ function loadQuizApp() {
   d_text.innerText = currentQuestionData.d;
 }
 
+function getSelected() {
+    const answersElement = document.querySelectorAll('.answer');
+
+    answers.forEach(answersElements => {
+        if(answersElement.checked) {
+            return answersElement.id;
+        }
+    });
+
+    return undefined;
+}
+
 submitButton.addEventListener('click', () => {
     currentQuiz++;
 
