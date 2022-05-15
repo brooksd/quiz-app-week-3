@@ -88,8 +88,11 @@ function decrementSeconds() {
     if (timeLeft < 10) {
         timer.innerHTML = '0' + timeLeft
     };
-    
-    
+
+    if (timeLeft < 0 ) {
+        clearTimeout(timer);
+    }
+
 }
 
 var cancel = setInterval(decrementSeconds, 1000);
@@ -121,7 +124,7 @@ submitButton.addEventListener('click', () => {
     //checks to see the answer
     const answer = getSelected();   
     
-
+// calculates the score over the totel number of questions
     if (answer) {
         if(answer === testQuestions[currentQuiz].correct) {
             score++;

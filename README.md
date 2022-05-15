@@ -20,7 +20,8 @@ As a user of the website,you will be able to :
 1. Select multiple choice questions they think are correct
 2. Submit the answers when done and taking the test and recieve results 
 3. Get a result based on the performance with an image at the end
-4. Move to the next Question only after answering the current one  
+4. Move to the next Question only after answering the current one 
+5. active timer for every question 
 [Go Back to the top](#Quiz-Board-App)
 
  ###  Requirements
