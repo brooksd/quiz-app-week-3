@@ -131,14 +131,14 @@ submitButton.addEventListener('click', () => {
        
         let result = `${score}/${testQuestions.length}`;
 
+
         if(currentQuiz < testQuestions.length) {
 
             loadQuizBoard();
 
         } else {
         //show Results when done
-            quiz.innerHTML = `<h2>You answered correctly ${result}Questions</h2>
-            <h1> You have ${percentage()}% </h1>
+            quiz.innerHTML = `<h3>You answered correctly ${result} Questions</h3>
             <button onclick="location.reload()"> Retry Test </button>`
         };
         
