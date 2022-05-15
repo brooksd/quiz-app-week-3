@@ -1,6 +1,6 @@
-let testQuestions = [
+const testQuestions = [
     {
-        question: 'JavaScript is an ____ language',
+        question: 'Q: JavaScript is an ____ language',
         a: 'Object-Oriented',
         b:'Object-based',
         c:'Assembly-language',
@@ -8,7 +8,7 @@ let testQuestions = [
         correct: 'a'
     }, 
     {
-        question: 'Which one of the following also known as Conditional Expression:',
+        question: 'Q: Which one of the following also known as Conditional Expression:',
         a: 'Alternative to if-else',
         b:'Switch statement',
         c:'if-then-else statement',
@@ -16,7 +16,7 @@ let testQuestions = [
         correct: 'd'
     }, 
     {
-        question: 'In JavaScript, what is a block of statement?',
+        question: 'Q: In JavaScript, what is a block of statement?',
         a: 'Conditional block',
         b:'block combines a number of statements into a single compound statement',
         c:'both conditional block and a single statement',
@@ -24,7 +24,7 @@ let testQuestions = [
         correct: ''
     }, 
     {
-        question: ' When interpreter encounters an empty statements, what it will do:',
+        question: 'Q: When interpreter encounters an empty statements, what it will do:',
         a: 'Shows a warning',
         b:'Prompts to complete the statement',
         c:'Throws the error',
@@ -32,7 +32,7 @@ let testQuestions = [
         correct: 'd'
     }, 
     {
-        question: ' The "function" and " var" are known as:',
+        question: 'Q: The "function" and " var" are known as:',
         a: 'Keywords',
         b:'Data types',
         c:'Declaration statements',
@@ -104,7 +104,7 @@ submitButton.addEventListener('click', () => {
 
         } else {
         //show Results when done
-            quiz.innerHTML = `<h2>You answered correctly ${score}/${quizData.length} Questions</h2> <button onclick="location.reload()"> Retry Test </button>`
+            quiz.innerHTML = `<h2>You answered correctly ${score}/${testQuestions.length} Questions</h2> <button onclick="location.reload()"> Retry Test </button>`
         };   
     };
     

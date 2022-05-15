@@ -15,15 +15,9 @@ body {
 
 /* JavaScript Logo*/
 
-.logo {
-    align-items: center;
-    position: absolute;
-    padding-bottom: 560px;
-}
-
-.logo img {
-    height: 120px;
-    width: 120px;
+img {
+    height: 50px;
+    width: 50px;
 }
 
 /* Header and Timer*/
@@ -45,6 +39,7 @@ body {
 .status-time {
     border: 1px solid gray;
     padding: 10px;
+    border-radius: 5px;
 }
 
 /* Questions Section */
