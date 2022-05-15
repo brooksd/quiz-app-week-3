@@ -36,7 +36,7 @@ As a user of the website,you will be able to :
 [Go Back to the top](#Quiz-Board-App)
 
 ### Live Link
-- Click this link to view the live application  
+- Click this link to view the live application https://brooksd.github.io/quiz-app-week-3/
 
 ### Technology  Used
 * HTML - The Makrup language was used in building the base structure of the webpage.
