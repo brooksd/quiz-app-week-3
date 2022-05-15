@@ -26,6 +26,27 @@ body {
     width: 120px;
 }
 
+/* Header and Timer*/
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0;
+}
+
+.header .title {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.status-time {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
 /* Questions Section */
 
 .questions-container {
@@ -35,6 +56,7 @@ body {
     overflow: hidden;
     width: 600px;
     max-width: 100%;
+    margin-top: 50px;
 }
 
 .questions-box {
