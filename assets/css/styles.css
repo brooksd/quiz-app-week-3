@@ -13,6 +13,21 @@ body {
     min-height: 100vh;
 }
 
+/* JavaScript Logo*/
+
+.logo {
+    align-items: center;
+    position: absolute;
+    padding-bottom: 560px;
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+}
+
+/* Questions Section */
+
 .questions-container {
     background-color: white;
     border-radius: 10px;
@@ -31,6 +46,8 @@ h2 {
     margin: 0;
 }
 
+/* list Section */
+
 ul {
     list-style: none;
     padding: 0;
@@ -39,6 +56,13 @@ ul {
 ul li {
     margin: 10px 0;
     font-size: 15px;
+    border: 1PX solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul li:hover {
+    background-color: #c2c2c2;
 }
 
 ul li label {
@@ -46,7 +70,7 @@ ul li label {
 }
 
 button {
-    background-color: rgb(160, 25, 160);
+    background-color: rgb(25, 88, 160);
     border: none;
     color: white;
     display: block;
@@ -58,5 +82,5 @@ button {
 }
 
 button:hover {
-    background-color: rgb(112, 15, 112);
+    background-color: rgb(15, 25, 112);
 }

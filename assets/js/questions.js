@@ -1,4 +1,4 @@
-const quizData = [
+let testQuestions = [
     {
         question: 'JavaScript is an ____ language',
         a: 'Object-Oriented',
@@ -38,14 +38,6 @@ const quizData = [
         c:'Declaration statements',
         d:'Prototypes',
         correct: 'c'
-    },
-    {
-        question: '  Which of the following keywords is used to define a variable in Javascript?',
-        a: 'var',
-        b:'let',
-        c:' Both A & B',
-        d:'None of the above',
-        correct: 'c'
     }
 ];
 
@@ -61,12 +53,12 @@ const submitButton = document.getElementById('submit');
 let currentQuiz = 0;
 let score = 0;
 
-loadQuizApp();
+loadQuizBoard();
 
-function loadQuizApp() {
+function loadQuizBoard() {
     deselctAnswers();
 
-    const currentQuestionData = quizData[currentQuiz];
+    const currentQuestionData = testQuestions[currentQuiz];
     questionElement.innerText = currentQuestionData.question;
 
     a_text.innerText = currentQuestionData.a;
@@ -100,19 +92,19 @@ submitButton.addEventListener('click', () => {
     
 
     if (answer) {
-        if(answer === quizData[currentQuiz].correct) {
+        if(answer === testQuestions[currentQuiz].correct) {
             score++;
         }
 
         currentQuiz++;
 
-        if(currentQuiz < quizData.length) {
+        if(currentQuiz < testQuestions.length) {
 
-            loadQuizApp();
+            loadQuizBoard();
 
         } else {
         //show Results when done
-            quiz.innerHTML = `<h2>You answered correctly ${score}/${quizData.length} Questions</h2>`
+            quiz.innerHTML = `<h2>You answered correctly ${score}/${quizData.length} Questions</h2> <button onclick="location.reload()"> Retry Test </button>`
         };   
     };
     
