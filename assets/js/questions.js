@@ -54,6 +54,7 @@ const submitButton = $.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+let timeLeft = 20;
 
 loadQuizBoard();
 
@@ -68,6 +69,30 @@ function loadQuizBoard() {
     c_text.innerText = currentQuestionData.c;
     d_text.innerText = currentQuestionData.d;
 }
+// Setting up the countdown timer
+
+var timer = $.getElementById('timer');
+
+function decrementSeconds() {
+    timeLeft -= 1;
+    timer.innerText =  timeLeft;
+
+    if (timeLeft < 20) {
+        tim
+    }
+    
+}
+
+var cancel = setInterval(decrementSeconds, 1000);
+
+let downloadTimer = setInterval(function() {
+    if (timeLeft <= 0) {
+        clearInterval(downloadTimer);
+    }
+
+    $.getElementById('.timer').value = 20 - timeLeft;
+    timeLeft -= 1;
+}, 1000);
 
 function getSelected() {
 
