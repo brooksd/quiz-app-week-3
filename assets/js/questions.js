@@ -21,7 +21,7 @@ let testQuestions = [
         b:'block combines a number of statements into a single compound statement',
         c:'both conditional block and a single statement',
         d:'block that contains a single statement',
-        correct: ''
+        correct: 'b'
     }, 
     {
         question: 'Q: When interpreter encounters an empty statements, what it will do:',
@@ -37,6 +37,14 @@ let testQuestions = [
         b:'Data types',
         c:'Declaration statements',
         d:'Prototypes',
+        correct: 'c'
+    },
+    {
+        question: 'Q: How do you declare variables?',
+        a:'let',
+        b:'var',
+        c:'A & B',
+        d:'none of the above',
         correct: 'c'
     }
 ];
@@ -77,22 +85,17 @@ function decrementSeconds() {
     timeLeft -= 1;
     timer.innerText =  timeLeft;
 
-    if (timeLeft < 20) {
-        tim
-    }
+    if (timeLeft < 10) {
+        timer.innerHTML = '0' + timeLeft
+    };
+    
     
 }
 
 var cancel = setInterval(decrementSeconds, 1000);
 
-let downloadTimer = setInterval(function() {
-    if (timeLeft <= 0) {
-        clearInterval(downloadTimer);
-    }
 
-    $.getElementById('.timer').value = 20 - timeLeft;
-    timeLeft -= 1;
-}, 1000);
+// loops between the Questions 
 
 function getSelected() {
 
@@ -113,6 +116,7 @@ function deselctAnswers() {
     });
 }
 
+
 submitButton.addEventListener('click', () => {
     //checks to see the answer
     const answer = getSelected();   
@@ -124,6 +128,8 @@ submitButton.addEventListener('click', () => {
         }
 
         currentQuiz++;
+       
+        let result = `${score}/${testQuestions.length}`;
 
         if(currentQuiz < testQuestions.length) {
 
@@ -131,12 +137,18 @@ submitButton.addEventListener('click', () => {
 
         } else {
         //show Results when done
-            quiz.innerHTML = `<h2>You answered correctly ${score}/${testQuestions.length} Questions</h2> <button onclick="location.reload()"> Retry Test </button>`
-        };   
+            quiz.innerHTML = `<h2>You answered correctly ${result}Questions</h2>
+            <h1> You have ${percentage()}% </h1>
+            <button onclick="location.reload()"> Retry Test </button>`
+        };
+        
     };
-    
     
    
 
 });
+
+
+
+
 
