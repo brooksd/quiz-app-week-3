@@ -21,7 +21,7 @@ As a user of the website,you will be able to :
 2. Submit the answers when done and taking the test and recieve results 
 3. Get a result based on the performance with an image at the end
 4. Move to the next Question only after answering the current one  
-[Go Back to the top](#Quick-Movers-Website)
+[Go Back to the top](#Quiz-Board-App)
 
  ###  Requirements
  * Access to  a computer or any other gadget

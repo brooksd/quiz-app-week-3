@@ -1,4 +1,4 @@
-const testQuestions = [
+let testQuestions = [
     {
         question: 'Q: JavaScript is an ____ language',
         a: 'Object-Oriented',
@@ -41,14 +41,16 @@ const testQuestions = [
     }
 ];
 
-const answersElement = document.querySelectorAll('.answer');
-const questionElement = document.getElementById("questions");
-const quiz = document.getElementById("quiz");
-const a_text = document.getElementById("a_text");
-const b_text = document.getElementById("b_text");
-const c_text = document.getElementById("c_text");
-const d_text = document.getElementById("d_text");
-const submitButton = document.getElementById('submit');
+let $ = document;
+
+const answersElement = $.querySelectorAll('.answer');
+const questionElement = $.getElementById("questions");
+const quiz = $.getElementById("quiz");
+const a_text = $.getElementById("a_text");
+const b_text = $.getElementById("b_text");
+const c_text = $.getElementById("c_text");
+const d_text = $.getElementById("d_text");
+const submitButton = $.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
